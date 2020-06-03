@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, h2 {
+  font-family: Lato;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 100%;
+  column-gap: 0.5em;
+  grid-column-gap: 0.5em; /* for older browsers */
+  row-gap: 0.5em;
+  grid-row-gap: 0.5em; /* for older browsers */
+}
+
+.one {
+    background-color: yellow;
+    z-index: 100
+}
+
+.two {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.three {
+    background-color: green;
+}
+
+.four {
+    background-color: pink;
+}
+
+.five {
+    background-color: orange;
+}
+
+.six {
+    background-color: purple;
+}
+
+.nested-1 {
+    background-color: grey;
+}
+
+.nested-2 {
+    background-color: turquoise;
+}
+
+.nested-3 {
+    background-color: violet;
+}
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="one">One</div>
+        <div class="two">
+          <div class="nested-1">Two - 1</div>
+          <div class="nested-2">Two - 2</div>
+          <div class="nested-3">Two - 3</div>
+        </div>
+        <div class="three">Three</div>
+        <div class="four">Four</div>
+        <div class="five">Five</div>
+        <div class="six">Six</div>
+      </div>
+</body>
+</html>
